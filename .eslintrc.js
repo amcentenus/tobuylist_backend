@@ -16,7 +16,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "singleQuote": true, "parser": "flow" }],
+    // "prettier/prettier": "error",
     "class-methods-use-this": "off",
     "no-param-reassign": "off",
     "camelcase": "off",

@@ -1,9 +1,10 @@
-import { Router } from "express";
+import { Router } from 'express';
+
+import TestController from './app/controllers/TestController';
 
 const routes = Router();
 
-routes.get("/", (req, res) => {
-  return res.json("Server on-line");
-});
+routes.get('/test/server', TestController.server);
+routes.get('/test/database', TestController.database);
 
 export default routes;
